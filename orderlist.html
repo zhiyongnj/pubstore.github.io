@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IM</title>
+    <style>
+        .product {
+            width: 300px;
+            height: 100px;
+            padding: 10px;
+            margin: 10px;
+            border: solid 1px red;
+            border-radius: 25px;
+        }
+
+        .bt {
+            margin-top: 10px;
+            float: right;
+        }
+
+        p {
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="width:300px">
+        <p>订单列表</p>
+        <div class="product">
+            <img src="http://img14.360buyimg.com/n1/jfs/t2191/111/699154754/198998/32d7bfe0/5624b582Nbc01af5b.jpg" style="width:100px;height:100px;float:left;">
+            <div style="width:200px;float:right;">
+                <p>Java编程思想（第4版）</p>
+                <p>价格：￥108.00</p>
+                <p>促销价：￥102.60</p>
+                <button type="button" onclick="product1()" class="bt">咨询商品</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="http://img10.360buyimg.com/n1/jfs/t1/119119/28/16355/390609/5f4870aaE11ee9a70/a3942abebcb6534a.jpg" style="width:100px;height:100px;float:left;">
+            <div style="width:200px;float:right;">
+                <p>JavaScript高级程序设计</p>
+                <p>价格：￥129.00</p>
+                <p>促销价：￥86.50</p>
+                <button type="button" onclick="product2()" class="bt">咨询商品</button>
+            </div>
+        </div>
+
+        <p>常用问题</p>
+        <button type="button" onclick="message1()">1. 快递进度</button>
+        <button type="button" onclick="message2()">2. 售后政策</button>
+    </div>
+
+    <script>function product1() {
+				var data = JSON.stringify({
+						method: "sendMsg",      // 固定method
+						type: "product",        // 固定type
+						content: {              // 商品消息格式
+							name: "Java编程思想（第4版）",
+							url: "https://item.jd.com/10058164.html",
+							imgUrl: "http://img14.360buyimg.com/n1/jfs/t2191/111/699154754/198998/32d7bfe0/5624b582Nbc01af5b.jpg",
+							params: [{
+								text: "价格：￥108.00",
+								break: true,
+								size: 14
+							}, {
+								text: "促销价：￥102.60",
+								color: "#FF0000"
+							}]
+						}
+					});
+				var origin = "*";
+				window.parent.postMessage(data, origin);
+			}
+
+			function product2() {
+				var data = JSON.stringify({
+						method: "sendMsg",      // 固定method
+						type: "product",        // 固定type
+						content: {              // 商品消息格式
+							name: "JavaScript高级程序设计",
+							url: "https://item.jd.com/12958580.html",
+							imgUrl: "http://img10.360buyimg.com/n1/jfs/t1/119119/28/16355/390609/5f4870aaE11ee9a70/a3942abebcb6534a.jpg",
+							params: [{
+								text: "价格：￥129.00",
+								break: false,
+								size: 12
+							}, {
+								text: "促销价：￥86.50",
+								color: "#FF0000"
+							}]
+						}
+					});
+				var origin = "*";
+				window.parent.postMessage(data, origin);
+			}
+
+			function message1() {
+				var data = JSON.stringify({
+						method: "sendMsg",   // 固定method
+						type: "text",        // 固定type
+						content:  "您好，查一下快递进度。"      // 需要发送的消息
+					});
+				var origin = "*";
+				window.parent.postMessage(data, origin);
+			}
+
+			function message2() {
+				var data = JSON.stringify({
+						method: "sendMsg",   // 固定method
+						type: "text",        // 固定type
+						content:  "请问，这款商品的售后政策是什么?"      // 需要发送的消息
+					});
+				var origin = "*";
+				window.parent.postMessage(data, origin);
+			}</script>
+</body>
+</html>
