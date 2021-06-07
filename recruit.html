@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>国家开放大学招生咨询</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <style type="text/css">
+        .questionZone {
+            font-family: "YaHei;color:#000000";
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .displayZone {
+            font-family: "YaHei;color:#000000";
+            font-size: 14px;
+            background: #EAE6DC;
+            margin-top:5px;
+
+            padding:5px;
+        }
+
+        .ulway li {
+            margin-top: 10px;
+            margin-bottom: 10px
+        }
+
+        ul li:hover a {
+            color: #3381DD;
+            cursor: pointer;
+        }
+
+
+    </style>
+    <script>
+        jQuery(function ($) {
+            $(".questionZone").click(function () {
+                $(this).next(".displayZone").toggle();
+            });
+            $(document).click(function (e) {
+                if (e.target.className != 'questionZone') {
+                    $(".displayZone").hide();
+                }
+            });
+        });
+    </script>
+</head>
+        <body >
+        <div id="1692759308554" >
+        <ul class="ulway">
+            <li>
+                <a class="questionZone"> 我想上国开，该怎么报名？</a>
+                <div class="displayZone" hidden>
+                    我是所显示的内容1
+                </div>
+            </li>
+            <li>
+                <a class="questionZone"> 我想读本科需要什么条件？</a>
+                <div class="displayZone" hidden>
+                    我是所显示的内容2
+                </div>
+            </li>
+            <li>
+                <a class="questionZone"> 入学需要交纳哪些费用？</a>
+                <div class="displayZone" hidden>
+                    我是所显示的内容3
+                </div>
+            </li>
+            <li>
+                <a class="questionZone"> 我最快几年可以毕业？</a>
+                <div class="displayZone" hidden>
+                    我是所显示的内容4
+                </div>
+            </li>
+            <li>
+                <a class="questionZone"> 国家开放大学的本科学历可以考研吗？</a>
+                <div class="displayZone" hidden>
+                    我是所显示的内容5
+                </div>
+            </li>
+            <li>
+                <a class="questionZone"> 我报名后是否有录取通知书？</a>
+                <div class="displayZone" hidden>
+                    我是所显示的内容6
+                </div>
+            </li>
+            <li>
+                <a class="questionZone"> 国家开放大学的毕业生可以报考公务员吗？</a>
+                <div class="displayZone" hidden>
+                    我是所显示的内容7
+                </div>
+
+            </li>
+        </ul >
+        </div >
+        </body >
+        </html >
