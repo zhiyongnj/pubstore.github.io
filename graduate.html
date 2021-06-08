@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>国家开放大学招生咨询</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <style type="text/css">
+        .questionZone {
+            font-family: "YaHei;color:#000000";
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .displayZone {
+            font-family: "YaHei;color:#000000";
+            font-size: 14px;
+            background: #EAE6DC;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            margin-right: 20px;
+            padding: 7px;
+            line-height: 24px
+        }
+
+        .ulway li {
+            margin-top: 18px;
+            margin-bottom: 18px;
+            list-style-type: none;
+        }
+
+        ul li:hover a {
+            color: #3381DD;
+            cursor: pointer;
+        }
+
+
+    </style>
+    <script>
+        jQuery(function ($) {
+            $(".questionZone").click(function () {
+                $(this).next(".displayZone").toggle();
+            });
+            $(document).click(function (e) {
+                if (e.target.className != 'questionZone') {
+                    $(".displayZone").hide();
+                }
+            });
+        });
+    </script>
+</head>
+        <body >
+        <div id="1692759308554" style="padding-top:10px;">
+            <ul class="ulway" style="padding-left: 10px;">
+                <li>
+                    <img src="img/qicon3.png" height="20px" width="20px" style="vertical-align: top;padding-right:10px" /> <a class="questionZone"> 毕业证书丢失了，可以补发吗？</a>
+                    <div class="displayZone" hidden>
+                        目前不能补发。您可以到学习中心申请开具毕业证明书，毕业证明书与毕业证书具有同等效力。
+                    </div>
+                </li>
+                <li>
+                    <img src="img/qicon3.png" height="20px" width="20px" style="vertical-align: top;padding-right:10px" /><a class="questionZone"> 我已毕业但基础信息有误怎么解决？</a>
+                    <div class="displayZone" hidden>
+                        请联系班主任协助修改。
+                    </div>
+                </li>
+                <li>
+                    <img src="img/qicon3.png" height="20px" width="20px" style="vertical-align: top;padding-right:10px" /><a class="questionZone"> 在哪里可以查询学历，怎么查询？</a>
+                    <div class="displayZone" hidden>
+                        登录<a href="https://www.chsi.com.cn/" target="_blank">中国高等教育学生信息网（学信网）</a>，通过“本人查询”功能查询学历。如果身份证注册信息填写不完整或不规范，可尝试通过“零散查询”功能进行查询。
+                    </div>
+                </li>
+                <li>
+                    <img src="img/qicon3.png" height="20px" width="20px" style="vertical-align: top;padding-right:10px" /><a class="questionZone"> 怎么下载教育部学历证书电子注册备案表?</a>
+                    <div class="displayZone" hidden>
+                        <p>第一步，访问并登录<a href="https://www.chsi.com.cn/" target="_blank">中国高等教育学生信息网（学信网）</a>，点击“高等教育信息”模块下的“学历”链接，进入学历信息页面；</p>
+                        <p>
+                            第二步，在学历信息页面，点击“查看该学历的电子注册备案表”，查看已申请的报告。
+                            可参考<a href="https://www.chsi.com.cn/xlrz/201806/20180627/1701280188.html" target="_blank"></a>指导说明，在线申请《教育部学历证书电子注册备案表》。
+                        </p>
+                    </div>
+                </li>
+
+
+                <DIV style="BORDER-TOP: #00686b 1px dashed; OVERFLOW: hidden; HEIGHT: 1px"></DIV>
+
+
+
+                <li>
+                    <img src="img/qicon3.png" height="20px" width="20px" style="vertical-align: top;padding-right:10px" /><a class="questionZone"> 我忘了报名时用的士官证号码怎么办？</a>
+                    <div class="displayZone" hidden>
+                        您可以联系班主任进行查询。
+                    </div>
+                </li>
+                <li>
+                    <img src="img/qicon3.png" height="20px" width="20px" style="vertical-align: top;padding-right:10px" /><a class="questionZone"> 我的学历能在学信网上查到么？</a>
+                    <div class="displayZone" hidden>
+                        能查到，通过报名时所使用的证件号（士官证或身份证号），登录到<a href="https://www.chsi.com.cn/" target="_blank">中国高等教育学生信息网（学信网）</a>进行查询。
+                    </div>
+                </li>
+            </ul>
+        </div >
+        </body >
+        </html >
